@@ -175,7 +175,7 @@ class DataLoader {
             this.setProgress(mapName, 1);
             this.processMapData(xhr.response, resolve);
         };
-        xhr.open('GET', `chunks/${mapName}.data`, true);
+        xhr.open('GET', `https://cdn.jsdelivr.net/gh/rickroll2222/games@latest/portal/chunks/${mapName}.data`, true);
         xhr.send();
 
         return promise;
@@ -233,7 +233,7 @@ class DataLoader {
                 partDone[i] = true;
                 checkComplete();
             };
-            xhr.open('GET', `chunks/${mapName}.data.part${i + 1}`, true);
+            xhr.open('GET', `https://cdn.jsdelivr.net/gh/rickroll2222/games@latest/portal/chunks/${mapName}.data.part${i + 1}`, true);
             xhr.send();
         }
     }
